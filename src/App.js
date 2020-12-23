@@ -5,6 +5,9 @@ import Login from "./pages/Auth/Login";
 import SignUp from "./pages/Auth/Signup";
 import CreatePost from "./pages/Posts/CreatePost";
 import PostDetail from "./pages/Posts/PostDetail";
+import NotFound from "./pages/NotFound/404";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 function App() {
   return (
     <div className="App">
@@ -23,6 +26,9 @@ function App() {
         </Route>
         <Route path="/PostDetail" exact>
           <PostDetail />
+        </Route>
+        <Route path="*" exact>
+          <NotFound />
         </Route>
       </Switch>
     </div>
